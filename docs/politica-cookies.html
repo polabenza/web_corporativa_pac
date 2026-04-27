@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Política de Cookies — FoodLogistics S.A.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #F7F3EE; --dark: #1A1612; --accent: #C45C2A; --accent2: #4A7C4E;
+      --muted: #7A6F65; --card: #EEEAE4; --border: #D4CCC4; --white: #FFFFFF;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { background: var(--bg); color: var(--dark); font-family: 'DM Sans', sans-serif; font-weight: 300; }
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 1.2rem 5%;
+      background: rgba(247,243,238,0.95); backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+    }
+    .logo { font-family: 'Playfair Display', serif; font-weight: 900; font-size: 1.4rem; color: var(--dark); text-decoration: none; }
+    .logo span { color: var(--accent); }
+    nav ul { list-style: none; display: flex; gap: 2.5rem; }
+    nav ul a { text-decoration: none; font-size: 0.88rem; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); transition: color 0.2s; }
+    nav ul a:hover { color: var(--accent); }
+    .page-hero { padding: 10rem 5% 4rem; background: var(--card); border-bottom: 1px solid var(--border); }
+    .page-hero .tag { font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--accent); font-weight: 500; border-left: 3px solid var(--accent); padding-left: 0.8rem; margin-bottom: 1rem; display: block; }
+    .page-hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(2.5rem, 4vw, 4rem); font-weight: 900; color: var(--dark); line-height: 1.1; }
+    .page-hero p { color: var(--muted); margin-top: 1rem; font-size: 0.95rem; }
+    .content-wrap { max-width: 860px; margin: 0 auto; padding: 5rem 5%; }
+    .legal-section { margin-bottom: 3rem; }
+    .legal-section h2 { font-family: 'Playfair Display', serif; font-size: 1.5rem; font-weight: 700; color: var(--dark); margin-bottom: 1rem; padding-bottom: 0.6rem; border-bottom: 2px solid var(--accent); display: inline-block; }
+    .legal-section p, .legal-section li { font-size: 0.95rem; line-height: 1.85; color: var(--muted); margin-bottom: 0.6rem; }
+    .legal-section ul { padding-left: 1.5rem; margin-bottom: 0.8rem; }
+    .cookie-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.88rem; }
+    .cookie-table th { background: var(--dark); color: var(--white); padding: 0.8rem 1rem; text-align: left; font-weight: 500; letter-spacing: 0.04em; font-size: 0.8rem; text-transform: uppercase; }
+    .cookie-table td { padding: 0.8rem 1rem; border-bottom: 1px solid var(--border); color: var(--muted); vertical-align: top; }
+    .cookie-table tr:nth-child(even) td { background: var(--card); }
+    .cookie-table td:first-child { font-weight: 500; color: var(--dark); white-space: nowrap; }
+    .badge { display: inline-block; font-size: 0.72rem; padding: 0.15rem 0.5rem; font-weight: 500; letter-spacing: 0.04em; }
+    .badge-tec { background: var(--dark); color: var(--white); }
+    .badge-ana { background: var(--accent2); color: var(--white); }
+    .badge-pre { background: var(--accent); color: var(--white); }
+    .btn-cookie { display: inline-block; padding: 0.7rem 1.6rem; font-size: 0.88rem; font-weight: 500; letter-spacing: 0.04em; cursor: pointer; border: none; transition: background 0.2s, transform 0.15s; font-family: 'DM Sans', sans-serif; }
+    .btn-accept { background: var(--accent2); color: var(--white); }
+    .btn-accept:hover { background: #3A6A3E; transform: translateY(-1px); }
+    .btn-reject { background: var(--card); color: var(--dark); border: 1px solid var(--border); }
+    .btn-reject:hover { background: var(--border); }
+    .cookie-actions { display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1.5rem; }
+    .cookie-msg { display: none; background: var(--accent2); color: var(--white); padding: 0.8rem 1.2rem; margin-top: 1rem; font-size: 0.88rem; }
+    footer { background: var(--dark); color: #7A6F65; padding: 2.5rem 5%; display: flex; align-items: center; justify-content: space-between; font-size: 0.82rem; }
+    footer a { color: #7A6F65; text-decoration: none; }
+    footer a:hover { color: var(--accent); }
+    @media(max-width:700px){ .cookie-table { font-size: 0.8rem; } nav ul { display: none; } }
+  </style>
+</head>
+<body>
+<nav>
+  <a href="foodlogistics.html" class="logo">Food<span>Logistics</span> <small style="font-size:0.6em;font-weight:300;font-family:'DM Sans',sans-serif;color:var(--muted);">S.A.</small></a>
+  <ul>
+    <li><a href="foodlogistics.html#inici">Inici</a></li>
+    <li><a href="foodlogistics.html#serveis">Serveis</a></li>
+    <li><a href="foodlogistics.html#sobre">Sobre nosaltres</a></li>
+    <li><a href="foodlogistics.html#contacte">Contacte</a></li>
+  </ul>
+</nav>
+
+<div class="page-hero">
+  <span class="tag">Galetes</span>
+  <h1>Política de Cookies</h1>
+  <p>Darrera actualització: gener de 2025 · Directiva ePrivacy i RGPD</p>
+</div>
+
+<div class="content-wrap">
+
+  <div class="legal-section">
+    <h2>1. Què són les cookies?</h2>
+    <p>Les cookies (galetes) són petits fitxers de text que els llocs web emmagatzemen al vostre navegador o dispositiu quan els visiteu. S'utilitzen àmpliament per fer que els llocs web funcionin correctament o de manera més eficient, i per proporcionar informació als propietaris del lloc.</p>
+    <p>D'acord amb la normativa vigent (Directiva 2002/58/CE modificada per la Directiva 2009/136/CE i la Llei 34/2002, LSSI-CE), us informem detalladament sobre les cookies que utilitzem.</p>
+  </div>
+
+  <div class="legal-section">
+    <h2>2. Tipus de cookies que utilitzem</h2>
+    <table class="cookie-table">
+      <thead>
+        <tr>
+          <th>Cookie</th>
+          <th>Tipus</th>
+          <th>Proveïdor</th>
+          <th>Finalitat</th>
+          <th>Durada</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>fl_cookie_consent</td>
+          <td><span class="badge badge-tec">Tècnica</span></td>
+          <td>FoodLogistics</td>
+          <td>Desa les preferències de consentiment de cookies de l'usuari.</td>
+          <td>12 mesos</td>
+        </tr>
+        <tr>
+          <td>sc_session</td>
+          <td><span class="badge badge-ana">Analítica</span></td>
+          <td>Statcounter</td>
+          <td>Identifica la sessió de l'usuari per evitar comptar múltiples visites del mateix usuari.</td>
+          <td>Sessió</td>
+        </tr>
+        <tr>
+          <td>is_unique</td>
+          <td><span class="badge badge-ana">Analítica</span></td>
+          <td>Statcounter</td>
+          <td>Determina si el visitant ja ha estat comptabilitzat com a visitant únic per evitar duplicats.</td>
+          <td>365 dies</td>
+        </tr>
+        <tr>
+          <td>_ga</td>
+          <td><span class="badge badge-ana">Analítica</span></td>
+          <td>Google Analytics (opcional)</td>
+          <td>Permet distingir els usuaris únics assignant un número identificador aleatori. No s'activa fins a l'acceptació.</td>
+          <td>2 anys</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Categories de cookies</h3>
+    <ul>
+      <li><strong>Cookies tècniques o necessàries:</strong> essencials per al funcionament bàsic del Lloc Web. No requereixen consentiment.</li>
+      <li><strong>Cookies analítiques:</strong> permeten analitzar el comportament dels usuaris per millorar el servei. Requereixen consentiment previ.</li>
+      <li><strong>Cookies de preferències:</strong> recorden les vostres opcions per personalitzar l'experiència. Requereixen consentiment previ.</li>
+    </ul>
+  </div>
+
+  <div class="legal-section">
+    <h2>3. Com acceptar o rebutjar les cookies</h2>
+    <p>Podeu gestionar el vostre consentiment sobre les cookies analítiques i de preferències de les maneres següents:</p>
+
+    <h3>3.1 Mitjançant el banner del Lloc Web</h3>
+    <p>En accedir al Lloc Web per primera vegada, apareixerà un banner que us permetrà acceptar o rebutjar les cookies no necessàries. Podeu canviar la vostra decisió en qualsevol moment des d'aquesta pàgina.</p>
+
+    <h3>3.2 Gestió des d'aquesta pàgina</h3>
+    <p>Podeu acceptar o retirar el consentiment de les cookies analítiques en qualsevol moment prement els botons següents:</p>
+    <div class="cookie-actions">
+      <button class="btn-cookie btn-accept" onclick="acceptCookies()">✓ Acceptar cookies analítiques</button>
+      <button class="btn-cookie btn-reject" onclick="rejectCookies()">✗ Rebutjar cookies analítiques</button>
+    </div>
+    <div class="cookie-msg" id="cookieMsg"></div>
+
+    <h3>3.3 Mitjançant la configuració del navegador</h3>
+    <p>També podeu gestionar o eliminar les cookies directament des del vostre navegador. A continuació trobareu els enllaços d'ajuda dels principals navegadors:</p>
+    <ul>
+      <li><a href="https://support.google.com/chrome/answer/95647" target="_blank" style="color:var(--accent);">Google Chrome</a></li>
+      <li><a href="https://support.mozilla.org/ca/kb/galetes-informacio-que-els-llocs-web-guarden-en" target="_blank" style="color:var(--accent);">Mozilla Firefox</a></li>
+      <li><a href="https://support.apple.com/ca-es/guide/safari/sfri11471/mac" target="_blank" style="color:var(--accent);">Apple Safari</a></li>
+      <li><a href="https://support.microsoft.com/ca-es/microsoft-edge/eliminar-les-galetes-al-microsoft-edge-63947406-40ac-c3b8-57b9-2a946a29ae09" target="_blank" style="color:var(--accent);">Microsoft Edge</a></li>
+    </ul>
+    <p>Tingueu en compte que la desactivació d'algunes cookies pot afectar el funcionament del Lloc Web.</p>
+  </div>
+
+  <div class="legal-section">
+    <h2>4. Més informació</h2>
+    <p>Per a qualsevol consulta sobre l'ús de cookies, podeu contactar amb el nostre Delegat de Protecció de Dades a <strong>privacitat@foodlogistics.cat</strong>. Per a més informació sobre el tractament de dades personals, consulteu la nostra <a href="politica-privacitat.html" style="color:var(--accent);">Política de Privacitat</a>.</p>
+  </div>
+
+</div>
+
+<footer>
+  <a href="foodlogistics.html" class="logo">Food<span style="color:var(--accent)">Logistics</span> S.A.</a>
+  <span>© 2025 FoodLogistics S.A. — <a href="avis-legal.html">Avís Legal</a> · <a href="politica-privacitat.html">Privacitat</a> · <a href="politica-cookies.html">Cookies</a></span>
+  <span>Mòdul Projecte Intermodular</span>
+</footer>
+
+<script>
+  function acceptCookies() {
+    localStorage.setItem('fl_cookie_consent', 'accepted');
+    const msg = document.getElementById('cookieMsg');
+    msg.textContent = '✓ Preferències desades. Heu acceptat les cookies analítiques.';
+    msg.style.display = 'block';
+    setTimeout(() => msg.style.display = 'none', 4000);
+  }
+  function rejectCookies() {
+    localStorage.setItem('fl_cookie_consent', 'rejected');
+    const msg = document.getElementById('cookieMsg');
+    msg.style.background = 'var(--muted)';
+    msg.textContent = '✗ Preferències desades. Heu rebutjat les cookies analítiques.';
+    msg.style.display = 'block';
+    setTimeout(() => msg.style.display = 'none', 4000);
+  }
+</script>
+
+<!-- Default Statcounter code for Web Corporativa de FoodLogistics
+https://polabenza.github.io/web_corporativa_pac/ -->
+<script type="text/javascript">
+var sc_project=13222533; 
+var sc_invisible=1; 
+var sc_security="983d4f93"; 
+</script>
+<script type="text/javascript"
+src="https://www.statcounter.com/counter/counter.js" async></script>
+<noscript><div class="statcounter"><a title="Web Analytics"
+href="https://statcounter.com/" target="_blank"><img class="statcounter"
+src="https://c.statcounter.com/13222533/0/983d4f93/1/" alt="Web Analytics"
+referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
+<!-- End of Statcounter Code -->
+</body>
+</html>
